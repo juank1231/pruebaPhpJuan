@@ -18,7 +18,7 @@
 
         $consulta_total="SELECT count(id) FROM productos";
     }
-    var_dump($consulta_datos);
+    //var_dump($consulta_datos);
     $conexion = conexion();
 
     $datos =  $conexion ->query($consulta_datos);
