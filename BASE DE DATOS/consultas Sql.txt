@@ -1,0 +1,11 @@
+
+--consulta para saber cual es el producto mas vendido
+
+SELECT nom.nombre_producto as 'Nombre producto', SUM(pre.precio_total) as 'Total vendido'
+    FROM ventas_producto pre JOIN productos nom ON pre.id_producto = nom.id
+    GROUP BY nom.nombre_producto
+    ORDER BY SUM(pre.precio_total) DESC LIMIT 1;
+
+--consulta para saber cual el el producto con mayor stock
+
+SELECT max(stock),nombre_producto FROM productos;
